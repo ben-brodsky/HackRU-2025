@@ -22,6 +22,7 @@ export async function printData()
         console.error('Error fetching data:', error);
     }
 }
+//Would you like this function to also return information about the job listings?
 
 
 //add username function, takes string
@@ -49,6 +50,13 @@ export async function addPassword(username, password)
 }
 //Perhaps this method above makes the get user info obsolete?
 //Think about adding a forgot password feature perhaps?
+
+
+
+
+
+
+
 
 
 
