@@ -19,7 +19,7 @@ const __dirname = path.dirname(__filename);
 app.get("/jobs/:category/:username", async (req, res) => {
     const username = req.params.username;
     const category = req.params.category;
-    const listings = await getJobListings(postID)
+    const listings = await getJobListings(category, username);
     res.status(200).json({listings: listings})
 })
 
