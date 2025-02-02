@@ -41,6 +41,17 @@ export async function getJobListings(username)
     return result;
 }
 
+//Add a password to a user
+export async function addPassword(username, password)
+{
+    const [result] = await pool.query("UPDATE users SET passwords = ? WHERE usernames = ?", [password, username]);
+    return result;
+}
+//Perhaps this method above makes the get user info obsolete?
+//Think about adding a forgot password feature perhaps?
+
+
+
 
 
 
