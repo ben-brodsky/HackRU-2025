@@ -1,5 +1,9 @@
+interface Props {
+    companyName: string;
+    jobName: string;
+}
 
-function JobItem(){
+function JobItem({companyName, jobName}: Props){
     return (
         <>
         <div id="job-item">
@@ -10,4 +14,4 @@ function JobItem(){
     )
 }
 
-export default JobItem
+export default JobItem;
