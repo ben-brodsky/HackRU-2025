@@ -26,6 +26,14 @@ export async function printData()
 // adds user on first time for creating account (when accessing log in )
 //based on username gets
 
+
+//add username function, takes string
+//SQL query: INSERT INTO users (username)
+
+
+//get all job listings from a certain username 
+//SQL query: SELECT * FROM job_listings WHERE username = ?, [username]
+
 export async function getPosts()
 {
     const [result] = await pool.query("SELECT * FROM posts")
