@@ -9,9 +9,14 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+<<<<<<< HEAD
+=======
+    "mysql2": "^3.12.0",
+>>>>>>> 98d3180edea8251190cf6fcc0dbdbb107f699a4b
     "node": "^23.7.0"
   }
 }
