@@ -111,6 +111,10 @@ export async function getRepliesUnderComment(id)
 
 export async function createPost(title, contents, username,)
 {
+    //Query to add username:
+    const [result] = await pool.query("INSERT INTO users (username) VALUES (?)", [username])
+    
+    
     const [result] = await pool.query("INSERT INTO posts (Username, Title, Contents) VALUES ('automatic', ?, ?)", [title, contents])
     const id = result.insertId
     return getPostFromID(id)
