@@ -9,14 +9,19 @@ function JobDisplay(){
         <>
         <div id="job-display-container">
             <div className="job-display-tab">
-                <p className="tab-header">New</p>
+                <p className="job-tab-header">New</p>
+                <div id="spacer"></div>
                 <JobItem></JobItem>
             </div>
             <div className="job-display-tab">
-                <p className="tab-header">In Progress</p>
+                <p className="job-tab-header">In Progress</p>
+                <div id="spacer"></div>
+                <JobItem></JobItem>
             </div>
             <div className="job-display-tab">
-                <p className="tab-header">Results</p>
+                <p className="job-tab-header">Results</p>
+                <div id="spacer"></div>
+                <JobItem></JobItem>
             </div>
         </div>
         </>

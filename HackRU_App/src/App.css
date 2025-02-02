@@ -26,12 +26,8 @@
   height: 100%;
 
   margin-bottom: 50px;
-}
 
-#job-item{
-  height:50px;
-  width:100%;
-  background-color: black;
+  box-shadow: 0px 0px 10px #C2D3CD;
 }
 
 #job-form-content{
@@ -48,13 +44,63 @@
   margin-bottom: 50px;
 }
 
+#spacer{
+  min-height:65px;
+  width:15px;
+}
+
+#company-name{
+  margin-left:15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+  color:#39393A;
+  font-weight:bolder;
+}
+
+#job-name{
+  margin-left:15px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color:#39393A;
+  font-weight:bolder;
+  background-color:#d1dfda;
+  border-radius:10px;
+  width:fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .job-display-tab{
-  height:100%;
+  display:flex;
+  flex-direction: column;
+
+  align-items: center;
+  min-height: 350px;
+  max-height: 350px;
   width:350px;
   background-color: #E6E6E6;
   margin: 50px;
 
   border-radius: 25px;
+
+  overflow-y: scroll;
+
+  box-shadow: 0px 0px 15px #C2D3CD;
+}
+
+#job-item{
+  height:50px;
+  min-height:75px;
+  width:75%;
+  height:fit-content;
+  background-color: #C2D3CD;
+
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px gray;
 }
 
 .background{
@@ -84,6 +130,21 @@ p{
   height: fit-content;
 }
 
+.job-tab-header{
+  padding:5px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  background-color: #297373;
+  border-radius: 15px;
+  width:fit-content;
+  height: fit-content;
+
+  position:absolute;
+}
+
 form{
   display: flex;
   flex-flow: row wrap;
@@ -111,6 +172,8 @@ form{
   padding:10px;
   padding-top:0px;
   border-radius: 15px;
+
+  box-shadow: 0px 0px 10px gray;
 }
 
 .job-form-textarea{
