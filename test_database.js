@@ -10,6 +10,22 @@ const pool = mysql.createPool({
     connectionLimit: 10
 }).promise()
 
+export async function printData()
+{
+    try {
+        // Query to select all data from the 'users' table
+        const [rows] = await pool.query('SELECT * FROM users');
+
+        // Loop through the results and print them
+        return rows;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+export 
+
+
 export async function getPosts()
 {
     const [result] = await pool.query("SELECT * FROM posts")
