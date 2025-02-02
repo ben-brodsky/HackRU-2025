@@ -1,6 +1,10 @@
+import Axios from "axios";
 
 const handleSubmit = async (event:any) => {
     event.preventDefault();
+    const companyName = event.target[0].value;
+    const jobTitle = event.target[1].value;
+    const res = await Axios.post("http://localhost:8080/post", {companyName:companyName, jobTitle:jobTitle})
   }
 
 function AddJob(){
