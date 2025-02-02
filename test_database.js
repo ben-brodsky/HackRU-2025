@@ -23,8 +23,8 @@ export async function printData()
     }
 }
 
-export 
-
+// adds user on first time for creating account (when accessing log in )
+//based on username gets
 
 export async function getPosts()
 {
@@ -125,12 +125,8 @@ export async function getRepliesUnderComment(id)
     return replies
 }
 
-export async function createPost(title, contents, username,)
+export async function createPost(title, contents, username,) //keep this in mind
 {
-    //Query to add username:
-    const [result] = await pool.query("INSERT INTO users (username) VALUES (?)", [username])
-    
-    
     const [result] = await pool.query("INSERT INTO posts (Username, Title, Contents) VALUES ('automatic', ?, ?)", [title, contents])
     const id = result.insertId
     return getPostFromID(id)
