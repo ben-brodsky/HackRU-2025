@@ -16,9 +16,10 @@ app.use(express.static("public"))
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.get("/post/:id", async (req, res) => {
-    const postID = req.params.id
-    const post = await getPostFromID(postID)
+app.get("/jobs/:category/:username", async (req, res) => {
+    const username = req.params.username;
+    const category = req.params.category;
+    const post = await getJobListings(postID)
     const comments = await getCommentsUnderPost(postID)
     res.status(200).json({post: post, comments: comments})
 })

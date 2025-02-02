@@ -36,9 +36,9 @@ export async function addUsername(username)
 
 //get all job listings from a certain username 
 //SQL query: SELECT * FROM job_listings WHERE username = ?, [username]
-export async function getJobListings(username)
+export async function getJobListings(category, username)
 {
-    const [result] = await pool.query("SELECT * FROM job_listing WHERE username = ?", [username]);
+    const [result] = await pool.query("SELECT * FROM job_listing WHERE category = ? AND username = ?", [category, username]);
     return result;
 }
 
