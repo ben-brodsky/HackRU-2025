@@ -13,17 +13,17 @@ function JobDisplay(){
 
     useEffect(() => {
         axios.get("http://localhost:8080/jobs/pending/test_username").then((res) => {
-            const pendingListings = res.data.posts;
+            const pendingListings = res.data.listings;
             setPendingListings(pendingListings);
         })
 
         axios.get("http://localhost:8080/jobs/underreview/test_username").then((res) => {
-            const reviewListings = res.data.posts;
+            const reviewListings = res.data.listings;
             setReivewListings(reviewListings);
         })
 
         axios.get("http://localhost:8080/jobs/completed/test_username").then((res) => {
-            const completedListings = res.data.posts;
+            const completedListings = res.data.listings;
             setCompletedListings(completedListings);
         })
     }, [])
