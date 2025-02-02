@@ -23,16 +23,26 @@ export async function printData()
     }
 }
 
-// adds user on first time for creating account (when accessing log in )
-//based on username gets
-
 
 //add username function, takes string
 //SQL query: INSERT INTO users (username)
+export async function addUsername(username)
+{
+    const [result] = await pool.query("INSERT INTO users (usernames) VALUES (?)", [username]);
+    return result;
+}
 
 
 //get all job listings from a certain username 
 //SQL query: SELECT * FROM job_listings WHERE username = ?, [username]
+export async function getJobListings(username)
+{
+    const [result] = await pool.query("SELECT * FROM job_listing WHERE username = ?", [username]);
+    return result;
+}
+
+
+
 
 export async function getPosts()
 {
