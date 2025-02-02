@@ -44,7 +44,8 @@ export async function getJobListings(username)
 
 export async function addJobListing(companyName, jobTitle)
 {
-    const [result] = await pool.query("INSERT INTO job_listing (company_name, job_title, category, username)", [companyName, jobTitle, "pending", "test_username"]);
+    console.log(companyName + " " + jobTitle);
+    const [result] = await pool.query("INSERT INTO job_listing VALUES (?, ?, ?, ?)", [companyName, jobTitle, "pending", "test_username"]);
     return result;
 }
 

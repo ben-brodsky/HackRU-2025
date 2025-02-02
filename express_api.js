@@ -28,3 +28,7 @@ app.post("/addjob", async (req, res) => {
     await addJobListing(companyName, jobTitle)
     res.status(200).send({status: "recieved"})
 })
+
+app.listen(port, () => {
+    console.log("Server is running on port " + port);
+})

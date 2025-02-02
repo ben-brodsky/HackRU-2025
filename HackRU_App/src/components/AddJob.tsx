@@ -4,7 +4,7 @@ const handleSubmit = async (event:any) => {
     event.preventDefault();
     const companyName = event.target[0].value;
     const jobTitle = event.target[1].value;
-    const res = await Axios.post("http://localhost:8080/post", {companyName:companyName, jobTitle:jobTitle})
+    const res = await Axios.post("http://localhost:8080/addjob", {companyName:companyName, jobTitle:jobTitle})
   }
 
 function AddJob(){
@@ -13,8 +13,7 @@ function AddJob(){
         <div id="job-form-container">
         <div className="tab-background" id="job-form">
           <p className="tab-header">Add Job</p>
-          <form id="job-form-content">
-          <form onSubmit={(event) => handleSubmit(event)}>
+          <form id="job-form-content" onSubmit={(event) => handleSubmit(event)}>
                     <div className="job-form-div">
                         <p className="form-header">Company</p>
                         <textarea className="job-form-textarea"id="create-post-title"></textarea>
@@ -26,7 +25,6 @@ function AddJob(){
                     <button 
                         className="medium-button orange" 
                         type="submit">Add Job</button>
-                </form>
           </form>
         </div>
       </div>
